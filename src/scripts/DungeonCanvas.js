@@ -1,7 +1,7 @@
 class DungeonCanvas {
-  constructor(selector, cellSize) {
+  constructor(cellSize) {
     this._cellSize = cellSize;
-    this._canvas = document.querySelector(selector);
+    this._canvas = document.createElement('canvas');
     this._ctx = this._canvas.getContext('2d');
   }
 

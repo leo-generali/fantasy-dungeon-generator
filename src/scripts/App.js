@@ -2,18 +2,37 @@ import { Dungeon } from './Dungeon';
 
 class App {
   constructor(newButtonSelector) {
+    this._dungeonContainer = document.querySelector('.app-dungeon-container');
     this._button = document.querySelector(newButtonSelector);
+
     this._size = [70, 40];
 
     this._button.addEventListener('click', () => {
-      this.createNewDungeon();
+      this._refreshDungeon();
     });
 
-    this.createNewDungeon();
+    this._createNewDungeon();
   }
 
-  createNewDungeon() {
-    Dungeon.create(...this._size);
+  // Private functions
+
+  _createNewDungeon() {
+    const dungeon = Dungeon.create(...this._size);
+    this._appendDungeonToPage(dungeon);
+  }
+
+  _appendDungeonToPage(dungeon) {
+    this._dungeonContainer.appendChild(dungeon.canvas);
+  }
+
+  _clearDrawnDungeon() {
+    const dungeon = document.querySelector('canvas');
+    this._dungeonContainer.removeChild(dungeon);
+  }
+
+  _refreshDungeon() {
+    this._clearDrawnDungeon();
+    this._createNewDungeon();
   }
 }
 

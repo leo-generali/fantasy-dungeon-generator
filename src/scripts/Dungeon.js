@@ -4,7 +4,7 @@ import { build } from 'dungeoneer';
 
 class Dungeon {
   static create(width, height, cellSize = 10) {
-    const dungeonCanvas = new DungeonCanvas('canvas', cellSize);
+    const dungeonCanvas = new DungeonCanvas(cellSize);
     const dungeon = build({ width, height });
 
     dungeonCanvas.setSize(width, height);
@@ -26,6 +26,8 @@ class Dungeon {
         });
       }
     }
+
+    return dungeonCanvas;
   }
 }
 
