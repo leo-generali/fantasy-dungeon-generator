@@ -16,9 +16,6 @@ class DungeonCanvas {
   setSize(width, height) {
     this._canvas.width = width * this._cellSize;
     this._canvas.height = height * this._cellSize;
-
-    this._canvas.style.width = width * this._cellSize + 'px';
-    this._canvas.style.height = height * this._cellSize + 'px';
   }
 
   paintBackground() {

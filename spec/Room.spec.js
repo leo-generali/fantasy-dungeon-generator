@@ -1,6 +1,10 @@
 import { Room } from '../src/scripts/Room';
 
-const room = new Room(10, 10, 1, 1);
+let room;
+
+beforeEach(() => {
+  room = new Room(10, 10, 1, 1);
+});
 
 describe('.overlappingWithPoint', () => {
   it('returns true if given point is within room plane', () => {
