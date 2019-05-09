@@ -1,0 +1,15 @@
+.color-schemes-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.color-scheme {
+  width: 8rem;
+
+  &__colors {
+    margin: 0 auto;
+    width: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

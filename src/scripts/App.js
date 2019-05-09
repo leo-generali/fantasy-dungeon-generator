@@ -1,29 +1,26 @@
 import { Dungeon } from './Dungeon';
-import { Seed } from './Seed';
+import { DungeonOptions } from './DungeonOptions';
 
 class App {
   constructor(newButtonSelector) {
     this._dungeonContainer = document.querySelector('.app-dungeon-container');
     this._button = document.querySelector(newButtonSelector);
 
-    this._size = [25, 25];
-
-    this._seedInput = new Seed();
+    this._options = new DungeonOptions();
 
     this._button.addEventListener('click', () => {
       this._refreshDungeon();
     });
 
+    this._addColorSchemeHandler();
+
     this._createNewDungeon();
   }
 
   // Private functions
-
   _createNewDungeon() {
-    const seed = this._seedInput.value;
-    console.log(seed);
-
-    const dungeon = Dungeon.create(...this._size, seed);
+    const options = this._options.get;
+    const dungeon = Dungeon.create(options);
     this._appendDungeonToPage(dungeon);
   }
 
@@ -39,6 +36,19 @@ class App {
   _refreshDungeon() {
     this._clearDrawnDungeon();
     this._createNewDungeon();
+  }
+
+  _addColorSchemeHandler() {
+    const updateColorSchemeButtons = document.querySelectorAll(
+      '.app-color-scheme-button'
+    );
+
+    updateColorSchemeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        console.log('asdasd');
+        this._refreshDungeon();
+      });
+    });
   }
 }
 
