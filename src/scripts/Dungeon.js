@@ -3,9 +3,12 @@ import { Room } from './Room';
 import { build } from 'dungeoneer';
 
 class Dungeon {
-  static create(width, height, cellSize = 16) {
+  static create(width, height, seed) {
+    const cellSize = 16;
+    console.log(seed);
+
     const dungeonCanvas = new DungeonCanvas(cellSize);
-    const dungeon = build({ width, height });
+    const dungeon = build({ width, height, seed });
 
     dungeonCanvas.setSize(width, height);
     dungeonCanvas.paintBackground('#2C3A47');

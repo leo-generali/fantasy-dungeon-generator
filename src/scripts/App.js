@@ -1,4 +1,5 @@
 import { Dungeon } from './Dungeon';
+import { Seed } from './Seed';
 
 class App {
   constructor(newButtonSelector) {
@@ -6,6 +7,8 @@ class App {
     this._button = document.querySelector(newButtonSelector);
 
     this._size = [25, 25];
+
+    this._seedInput = new Seed();
 
     this._button.addEventListener('click', () => {
       this._refreshDungeon();
@@ -17,7 +20,10 @@ class App {
   // Private functions
 
   _createNewDungeon() {
-    const dungeon = Dungeon.create(...this._size);
+    const seed = this._seedInput.value;
+    console.log(seed);
+
+    const dungeon = Dungeon.create(...this._size, seed);
     this._appendDungeonToPage(dungeon);
   }
 

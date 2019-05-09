@@ -1,6 +1,7 @@
 // Styles
 import '../styles/index.scss';
-import tileset from '../tilesets/dungeon.png';
+
+// import tileset from '../tilesets/dungeon.png';
 
 import { App } from './App';
 
