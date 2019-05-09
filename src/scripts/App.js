@@ -5,7 +5,7 @@ class App {
     this._dungeonContainer = document.querySelector('.app-dungeon-container');
     this._button = document.querySelector(newButtonSelector);
 
-    this._size = [50, 70];
+    this._size = [25, 25];
 
     this._button.addEventListener('click', () => {
       this._refreshDungeon();

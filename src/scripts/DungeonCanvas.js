@@ -18,8 +18,8 @@ class DungeonCanvas {
     this._canvas.height = height * this._cellSize;
   }
 
-  paintBackground() {
-    this._ctx.fillStyle = 'black';
+  paintBackground(color) {
+    this._ctx.fillStyle = color;
     this._ctx.fillRect(0, 0, this._ctx.canvas.width, this._ctx.canvas.height);
   }
 
