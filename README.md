@@ -4,9 +4,13 @@ A fantasy dungeon generator built with Vanilla JS 🍦 and SCSS 🖌️
 
 ### To Do/Roadmap
 - [x] Create initial app
+- [x] Add tests
+- [ ] Make look good 👨‍🎨
 - [ ] Add user config options
-- [ ] Add tests
-- [ ] Use legit dungeon  tilesets
+  - [ ] Seed
+  - [ ] Color scheme
+  - [ ] Size
+- [ ] Use legit dungeon tilesets
 
 ### Thanks To
 - [Dungeoneer](https://www.npmjs.com/package/dungeoneer) for providing a JS library that dynamically generates dungeons 🗺️
