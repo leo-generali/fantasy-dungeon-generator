@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Fantasy Dungeon Generator</title>
 </head>
 <body>
@@ -10,11 +10,15 @@
     <section class='dungeon-container app-dungeon-container'></section>
     <section class='dungeon-info-container'>
       <h1>Fantasy Dungeon Generator</h1>
-      <button class='button app-new-dungeon'>New Dungeon 🎲</button>
-      <div class="form-group">
-        <label class="form-label" for="dungeon-seed">Name</label>
-        <input class="form-input app-dungeon-seed-input" type="text" id="dungeon-seed" placeholder="Dungeon seed">
-      </div>
+      <form class='dungeon-form'>
+        <button class='button button--new-dungeon app-new-dungeon'>New Dungeon 🎲</button>
+        <div class='dungeon-form__input-wrapper'>
+          <input class='dungeon-form__input app-dungeon-seed-input' type='text' id='dungeon-seed' placeholder='Dungeon seed'>
+          <label class='dungeon-form__label' for='dungeon-seed'>
+              Seed
+          </label>
+        </div>
+      </form>
       <div class='color-schemes-container app-color-schemes-container'>
       </div>
     </section>

@@ -1,0 +1,25 @@
+.dungeon-form {
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  
+  &__input-wrapper {
+    border-radius: $border-radius;
+    background-color: $primary-dark;
+    display: grid;
+    grid-template-columns: 1fr 5rem;
+    overflow: hidden;
+  }
+  
+  &__label {
+    font-size: 1.6rem;
+    align-self: center;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__input {
+    font-size: 1.6rem;
+  }
+}

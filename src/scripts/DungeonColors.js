@@ -29,7 +29,7 @@ class DungeonColors {
 
       const updateColorSchemeButton = document.createElement('button');
       updateColorSchemeButton.className =
-        'button button__color-scheme app-color-scheme-button';
+        'button button--color-scheme app-color-scheme-button';
       updateColorSchemeButton.innerHTML = colorScheme.name;
       updateColorSchemeButton.addEventListener('click', () => {
         this.colorScheme = colorScheme;

@@ -8,7 +8,8 @@ class App {
 
     this._options = new DungeonOptions();
 
-    this._button.addEventListener('click', () => {
+    this._button.addEventListener('click', (evt) => {
+      evt.preventDefault();
       this._refreshDungeon();
     });
 
@@ -45,7 +46,6 @@ class App {
 
     updateColorSchemeButtons.forEach((button) => {
       button.addEventListener('click', () => {
-        console.log('asdasd');
         this._refreshDungeon();
       });
     });

@@ -25,7 +25,11 @@
     background-color: $primary-dark;
   }
 
-  &__color-scheme {
+  &--new-dungeon {
+    margin-right: 1rem;
+  }
+
+  &--color-scheme {
     width: 100%;
   }
 }
