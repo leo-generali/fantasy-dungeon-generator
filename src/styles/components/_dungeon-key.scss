@@ -1,0 +1,21 @@
+.dungeon-key {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 1.5rem;
+
+  &__color-info {
+    width: 8rem;
+  }
+
+  &__color {
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    text-align: center;
+    display: block;
+  }
+}

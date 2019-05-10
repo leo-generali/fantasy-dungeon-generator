@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <title>Fantasy Dungeon Generator</title>
-</head>
-<body>
-  <main>
-    <section class='dungeon-container app-dungeon-container'></section>
-    <section class='dungeon-info-container'>
-      <h1>Fantasy Dungeon Generator</h1>
-      <form class='dungeon-form'>
-        <button class='button button--new-dungeon app-new-dungeon'>New Dungeon 🎲</button>
-        <div class='dungeon-form__input-wrapper'>
-          <input class='dungeon-form__input app-dungeon-seed-input' type='text' id='dungeon-seed' placeholder='Dungeon seed'>
-          <label class='dungeon-form__label' for='dungeon-seed'>
-              Seed
-          </label>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fantasy Dungeon Generator</title>
+  </head>
+  <body>
+    <main>
+      <section class="dungeon-container app-dungeon-container"></section>
+      <section class="dungeon-info-container">
+        <h1 class="h1 strong">Fantasy Dungeon Generator</h1>
+        <div class='info-section'>
+          <h2 class="strong label">Colors</h2>
+          <div class="color-schemes-container app-color-schemes-container"></div>
         </div>
-      </form>
-      <div class='color-schemes-container app-color-schemes-container'>
-      </div>
-    </section>
-  </main>
-</body>
+        <div class='info-section'>
+          <h2 class="strong label">Map Info</h2>
+          <div class="dungeon-key app-dungeon-key">
+            <div class="dungeon-key__color-info">
+              <div class="dungeon-key__color"></div>
+              <span class="dungeon-key__label">Floor</span>
+            </div>
+          </div>
+          <form class="dungeon-form">
+            <label class="dungeon-form__label" for="dungeon-seed">
+              Seed
+            </label>
+            <input
+              class="dungeon-form__input app-dungeon-seed-input"
+              type="text"
+              id="dungeon-seed"
+              placeholder="Dungeon seed"
+            />
+            <button class="button button--full-width app-new-dungeon">
+              New Dungeon 🎲
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

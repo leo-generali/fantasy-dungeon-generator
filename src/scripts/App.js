@@ -1,5 +1,6 @@
 import { Dungeon } from './Dungeon';
 import { DungeonOptions } from './DungeonOptions';
+import { DungeonKey } from './DungeonKey';
 
 class App {
   constructor(newButtonSelector) {
@@ -14,7 +15,6 @@ class App {
     });
 
     this._addColorSchemeHandler();
-
     this._createNewDungeon();
   }
 
@@ -22,6 +22,8 @@ class App {
   _createNewDungeon() {
     const options = this._options.get;
     const dungeon = Dungeon.create(options);
+    const keyArr = DungeonKey.create(options.colors);
+    this._appendKeysToPage(keyArr);
     this._appendDungeonToPage(dungeon);
   }
 
@@ -48,6 +50,18 @@ class App {
       button.addEventListener('click', () => {
         this._refreshDungeon();
       });
+    });
+  }
+
+  _appendKeysToPage(keyArr) {
+    const keyElem = document.querySelector('.app-dungeon-key');
+    let child = keyElem.lastElementChild;
+    while (child) {
+      keyElem.removeChild(child);
+      child = keyElem.lastElementChild;
+    }
+    keyArr.forEach((elem) => {
+      keyElem.appendChild(elem);
     });
   }
 }
