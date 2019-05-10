@@ -4,10 +4,10 @@
 }
 
 .color-scheme {
-  width: 8rem;
+  width: 7.5rem;
 
   &__colors {
-    margin: 0 auto;
+    margin: 0 auto 0.5rem;
     width: 5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
